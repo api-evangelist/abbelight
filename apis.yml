@@ -1,17 +1,35 @@
 aid: abbelight
 name: Abbelight
-description: 'Abbelight is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Abbelight is a French bioimaging company founded in 2016 and headquartered
+  in Cachan, near Paris, that designs and manufactures single-molecule localization
+  microscopy (SMLM) and nanoscopy instrumentation. Its modular SAFe platform — SAFe
+  Excitation, SAFe Detection and the SAFe Nexus optronic control bay — mounts on the
+  camera port of any inverted microscope and upgrades it from diffraction-limited
+  widefield and TIRF imaging to super-resolution techniques including STORM, PALM,
+  DNA-PAINT and spectral demixing. The company also ships the Smart Flow automated
+  sample-preparation system, ready-to-use staining and buffer kits, and the SAFe Neo
+  software suite for 3D quantitative analysis and visualization of localization data.
+  Abbelight sells through account executives and a consumables webshop, and raised a
+  Series B led by AVANT BIO in January 2026. As of this profile it publishes no public
+  API, SDK, developer portal or machine-readable specification.'
+image: https://www.abbelight.com/wp-content/themes/abbelight/assets/images/svg/abbelight_black.svg
 url: https://raw.githubusercontent.com/api-evangelist/abbelight/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-09-05'
 modified: '2026-09-05'
 tags:
 - Company
+- Bioimaging
+- Microscopy
+- Nanoscopy
+- Super Resolution
+- Scientific Instruments
+- Life Sciences
+- Laboratory
+- Medical Devices
+- France
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +38,40 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://equityzen.com/company/abbelight
+  url: https://www.abbelight.com/
+- type: Support
+  url: https://www.abbelight.com/customer-care/
+- type: TermsOfService
+  url: https://www.abbelight.com/legal-notice/
+- type: PrivacyPolicy
+  url: https://www.abbelight.com/data-policy/
+- type: LLMsTxt
+  url: llms/abbelight-llms.txt
+- type: DomainSecurity
+  url: security/abbelight-domain-security.yml
+x-enrichment:
+  date: '2026-09-05'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Abbelight sells super-resolution microscopes, consumables and the desktop SAFe Neo analysis
+    suite through account executives and a WooCommerce shop; its entire 26-page WordPress site
+    contains no developer, API, SDK or integration page, and the only machine-readable surface
+    on any host it controls is the default WordPress REST API at shop.abbelight.com/wp-json/,
+    which returns 401 rest_not_logged_in to anonymous callers.
+  evidence:
+  - url: https://www.abbelight.com/openapi.json
+    status: 404
+  - url: https://www.abbelight.com/llms.txt
+    status: 404
+  - url: https://www.abbelight.com/.well-known/agent-card.json
+    status: 404
+  - url: https://shop.abbelight.com/wp-json/
+    status: 401
+  - url: https://api.github.com/orgs/abbelight
+    status: 200
+  checked: '2026-09-05'
